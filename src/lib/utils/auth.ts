@@ -38,7 +38,6 @@ export const destroySession = async () => {
 export const verifyToken = async () => {
   try {
     const token = (await cookies()).get("token");
-
     if (!token) return false;
 
     const { payload } = await jwtVerify(token.value, secret);

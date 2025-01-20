@@ -1,5 +1,5 @@
 import { getAllUsers } from "@/lib/actions/db/User/read.actions";
-import Dashboard from "@/pages-lib/Dashboard.page";
+import DashboardPage from "@/pages-lib/Dashboard.page";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function Page() {
   try {
     const users = await getAllUsers();
-    return <Dashboard users={users} />;
+    return <DashboardPage users={users} />;
   } catch (error) {
     console.error(error);
     notFound(); // 404

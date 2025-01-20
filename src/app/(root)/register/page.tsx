@@ -1,4 +1,4 @@
-import RegisterForm from "@/components/forms/RegisterForm";
+import RegisterPage from "@/pages-lib/Register.Page";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Register - Next Playground",
@@ -20,13 +20,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return (
-    <main className="p-4 flex w-full justify-center">
-      <div className="w-full max-w-md">
-        <RegisterForm />
-      </div>
-    </main>
-  );
+  return <RegisterPage />;
 };
 
 export default Page;

@@ -1,4 +1,4 @@
-import LoginForm from "@/components/forms/LoginForm";
+import LoginPage from "@/pages-lib/Login.page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,11 +21,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <main className="p-4 flex w-full justify-center">
-      <div className="w-full max-w-md">
-        <LoginForm />
-      </div>
-    </main>
-  );
+  return <LoginPage />;
 }

@@ -4,9 +4,9 @@ interface DashboardProps {
   users: User[];
 }
 
-const Dashboard = ({ users }: DashboardProps) => {
+const DashboardPage = ({ users }: DashboardProps) => {
   return (
-    <div>
+    <main>
       <h1>Dashboard</h1>
       <ul>
         {users.map((user) => (
@@ -15,8 +15,8 @@ const Dashboard = ({ users }: DashboardProps) => {
           </li>
         ))}
       </ul>
-    </div>
+    </main>
   );
 };
 
-export default Dashboard;
+export default DashboardPage;

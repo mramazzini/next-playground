@@ -36,7 +36,7 @@ export const login = async (data: {
   if (!passwordMatch) {
     return AuthResult.InvalidCredentials;
   }
-  generateToken(user.id);
+  await generateToken(user.id);
   return AuthResult.Success;
 };
 
@@ -97,7 +97,7 @@ export const signup = async (data: {
     return AuthResult.FailedToCreateUser;
   }
 
-  generateToken(newUser.id);
+  await generateToken(newUser.id);
 
   return AuthResult.Success;
 };

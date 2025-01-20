@@ -2,13 +2,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { isAdministrator, verifyToken } from "@/lib/utils/auth";
 
-const protectedRoutes = [
-  "/class/create",
-  "/character",
-  "/dashboard",
-  "/workshop",
-];
-const adminRoutes = ["/admin", "/admin/messages"];
+const protectedRoutes = ["/dashboard"];
+const adminRoutes = ["/admin"];
 
 export async function middleware(req: NextRequest) {
   const isAuthenticated = await verifyToken();
