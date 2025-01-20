@@ -8,6 +8,7 @@ const DashboardPage = ({ users }: DashboardProps) => {
   return (
     <main>
       <h1>Dashboard</h1>
+      <pre>{JSON.stringify(users, null, 2)}</pre>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
