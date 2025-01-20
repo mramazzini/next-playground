@@ -2,12 +2,12 @@ import LoginPage from "@/pages-lib/Login.page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login - Next Playground",
+  title: "Login",
   description: "Login to your account to access absolutely nothing.",
   openGraph: {
     type: "website",
 
-    title: "Login - Next Playground",
+    title: "Login",
     description: "Login to your account to access absolutely nothing.",
     images: [
       {

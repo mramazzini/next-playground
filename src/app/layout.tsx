@@ -5,8 +5,16 @@ import "./globals.css";
 // import { Analytics } from "@vercel/analytics/react";
 import { Provider } from "react-redux";
 import makeStore from "@/store/store";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Next Playground",
+    default: "Next Playground",
+  },
+};
 
 export default function RootLayout({
   children,

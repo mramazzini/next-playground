@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
 
-    title: "Register - Next Playground",
+    title: "Register",
     description: "Create an account to access absolutely nothing.",
     images: [
       {
