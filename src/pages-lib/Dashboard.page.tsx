@@ -1,10 +1,15 @@
+"use client";
+import { getAllUsers } from "@/lib/actions/db/User/read.actions";
 import { User } from "@prisma/client";
+import { useEffect, useState } from "react";
 
-interface DashboardProps {
-  users: User[];
-}
+const DashboardPage = () => {
+  const [users, setUsers] = useState<User[]>([]);
 
-const DashboardPage = ({ users }: DashboardProps) => {
+  useEffect(() => {
+    getAllUsers().then((users) => setUsers(users));
+  });
+
   return (
     <main>
       <h1>Dashboard</h1>
